@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Portfolio</title>
+
+<link rel="stylesheet" href="avatarStyles.css">
+
+<style>
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Skill Card */
+.skill-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.skill-card h3 {
+    font-size: 28px;
+    color: #5e0c66;
+    margin-bottom: 12px;
+}
+
+/* Skill List */
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+}
+
+.skill-item {
+    padding: 10px 12px;
+    background: rgba(230, 199, 255, 0.4);
+    color: #3d0054;
+    border-left: 4px solid #9a0cb2;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #222;
+    font-weight: 600;
+}
+</style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="profile-box">
+        <img src="avatar.png" alt="Avatar" class="avatar-img">
+        <h2 class="profile-name">Archana</h2>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="avatarpage.html">Home</a></li>
+        <li><a href="skillspage.html" class="active">Skills</a></li>
+        <li><a href="contactpage.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- Technical Skills -->
+    <div class="skill-card">
+      <h3>Technical Skills</h3>
+
+      <div class="skill-list">
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">PHP</div>
+        <div class="skill-item">MySQL</div>
+        <div class="skill-item">SQL Queries</div>
+        <div class="skill-item">AWS Basics</div>
+        <div class="skill-item">Git & GitHub</div>
+      </div>
+    </div>
+
+
+    <!-- Soft Skills -->
+    <div class="skill-card">
+      <h3>Soft Skills</h3>
+
+      <div class="skill-list">
+        <div class="skill-item">Communication</div>
+        <div class="skill-item">Leadership</div>
+        <div class="skill-item">Teamwork</div>
+        <div class="skill-item">Problem Solving</div>
+        <div class="skill-item">Adaptability</div>
+        <div class="skill-item">Time Management</div>
+      </div>
+    </div>
+
+
+    <!-- Tools -->
+    <div class="skill-card">
+      <h3>Tools & Technologies</h3>
+
+      <div class="skill-list">
+        <div class="skill-item">VS Code</div>
+        <div class="skill-item">Git</div>
+        <div class="skill-item">XAMPP</div>
+        <div class="skill-item">phpMyAdmin</div>
+        <div class="skill-item">AWS Console</div>
+        <div class="skill-item">Postman</div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

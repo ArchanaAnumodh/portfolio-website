@@ -1,53 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achu Anumodh — Portfolio</title>
-  <meta name="description" content="Portfolio of Achu Anumodh — PHP Developer, AWS learner, IT Support" />
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Portfolio</title>
+
+<!-- Link to your main CSS -->
+<link rel="stylesheet" href="avatarStyles.css">
+
+<style>
+/* Page Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Card Style */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.card h3 {
+    font-size: 28px;
+    color: #5e0c66;
+}
+
+.small {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.links {
+    color: #a10fa1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #222;
+    font-weight: 600;
+}
+</style>
 
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar">
-        <a class="btn" href="avatarpage.html">AA</a>
+
+  <!-- HEADER START -->
+  <header>
+    <nav class="navbar">
+
+      <!-- Avatar + Name -->
+      <div class="profile-box">
+        <img src="avatar.png" alt="Avatar" class="avatar-img">
+        <h2 class="profile-name">Archana</h2>
       </div>
-      <div>
-        <h1>Achu Anumodh</h1>
-        <p class="lead"> Contact Page</p>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="avatarpage.html">Home</a></li>
+        <li><a href="skillspage1.html">Skills</a></li>
+        <li><a href="contactpage.html" class="active">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <!-- HEADER END -->
+
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- CONTACT CARD -->
+    <div class="card">
+      <h3>Contact</h3>
+
+      <div class="contact-list" style="margin-top:15px">
+        <div class="small">📧 Email: 
+          <a class="links" href="mailto:achuanumodh@gmail.com">achuanumodh@gmail.com</a>
+        </div>
+
+        <div class="small">📞 Phone: +91 7306559602</div>
+        <div class="small">📍 Location: Kerala, India</div>
+
+        <div class="small">💻 GitHub: 
+          <a href="#" class="links">github.com/ArchanaAnumodh</a>
+        </div>
+      </div>
     </div>
-    </header>
 
-    <main>
-      <section>
-        <div class="card" style="margin-top:16px">
-          <h3>Contact</h3>
-          <div class="contact-list" style="margin-top:8px">
-            <div class="small">Email: <a class="links" href="mailto:your.email@example.com">your.email@example.com</a></div>
-            <div class="small">Phone: +91 98765 43210</div>
-            <div class="small">Location: Kerala, India</div>
-            <div class="small">GitHub: <a href="#" class="links">github.com/yourusername</a></div>
-          </div>
-        </div>
-      </section>
+    <!-- QUICK LINKS CARD -->
+    <div class="card" style="margin-top:16px">
+  <h3>Quick Links</h3>
 
-        <div class="card" style="margin-top:16px">
-          <h3>Quick Links</h3>
-          <p class="small muted">Add links to live demos, GitHub repos, or a public CV here.</p>
-        </div>
-    </main>
+  <div class="social-icons" style="margin-top:12px; display:flex; gap:16px;">
 
-    <footer>
-      <small>© 2025 Achuanumodh.</small>
-    </footer>
+    <!-- GitHub -->
+    <a href="https://github.com/ArchanaAnumodh" target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+           style="width:34px; height:34px;" alt="GitHub">
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917306559602" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+           style="width:34px; height:34px;" alt="WhatsApp">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/_archana_kk_" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+           style="width:34px; height:34px; border-radius:8px;" alt="Instagram">
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" 
+           style="width:34px; height:34px;" alt="LinkedIn">
+    </a>
+
   </div>
+</div>
 
-  <script>
-    function downloadPDF(){
-      alert('Click OK to download the Resume');
-    }
-  </script>
+
+  </main>
+
+
 </body>
 </html>

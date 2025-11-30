@@ -19,19 +19,27 @@ body{
 /* =============================== */
 /* NAVBAR */
 /* =============================== */
-.navbar{
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 60px;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:10;
-  background:rgb(255, 255, 255);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(0,255,255,0.1);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    color: #060e12;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;   /* vertically center image and name */
+    gap: 12px;             /* space between image and name */
 }
 
 .logo{
@@ -39,25 +47,6 @@ body{
   color:#00f6ff;
   font-weight:700;
   text-shadow:0 0 12px #00f6ff;
-}
-
-.nav-links{
-  display:flex;
-  gap:32px;
-  list-style:none;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:#060e12;
-  font-size:16px;
-  transition:0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active{
-  color:#e24cea;
-  text-shadow:0 0 10px #e466f2;
 }
 
 .btn-glow{
@@ -80,7 +69,7 @@ body{
 /* HERO SECTION */
 /* =============================== */
 .hero{
-  height:100vh;
+  height:50vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -105,6 +94,14 @@ body{
 /* Glowing Heading */
 .glow-title{
   font-size:70px;
+  font-weight:700;
+  color:#490351;
+ /* text-shadow:0 0 20px #f08bf0, 0 0 50px #ef82f9;*/
+  line-height:1.1;
+}
+
+.glow-title-skills{
+  font-size:40px;
   font-weight:700;
   color:#490351;
  /* text-shadow:0 0 20px #f08bf0, 0 0 50px #ef82f9;*/
@@ -171,8 +168,8 @@ body{
 }
 
 .avatar img {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #38022c;
@@ -207,7 +204,7 @@ body{
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #9921a9;
+  background: #db8ae6;
   color: #000;
   border: none;
   padding: 14px 20px;
@@ -243,7 +240,7 @@ body{
   font-weight: 600;
   display: flex;
   justify-content: space-between;
-  color: #9016a3;
+  color: #d7a8de;
 }
 
 /* Close Button */
@@ -308,3 +305,90 @@ body{
   font-weight: 700;
 }
 
+.header-title{
+  font-size:30px;
+  font-weight:700;
+  color:#490351;
+ /* text-shadow:0 0 20px #f08bf0, 0 0 50px #ef82f9;*/
+  line-height:1.1;
+}
+
+
+/* Avatar + Name */
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(186, 28, 239);       /* glowing neon border */
+    box-shadow: 0 0 10px rgb(221, 37, 203);
+}
+
+.profile-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0c0b0b;
+    text-shadow: 0 0 10px rgb(191, 159, 183);
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #0c0b0b;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* Neon underline on hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(159, 7, 167);
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 8px rgb(226, 146, 219);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Active link color */
+.nav-links a.active {
+    color: rgb(188, 11, 161);
+    text-shadow: 0 0 10px rgb(239, 187, 232);
+}
+
+/* Mobile responsive */
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .avatar-img {
+        width: 45px;
+        height: 45px;
+    }
+}

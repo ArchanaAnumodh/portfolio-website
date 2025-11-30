@@ -7,26 +7,28 @@
 <link rel="stylesheet" href="avatarStyles.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="avatar">
-        <img src="avatar.png" alt="My Avatar">
-    </div>
-    <ul class="nav-links">
-      <li><a href="mainpage.html" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="projectspage.html">Projects</a></li>
-      <li><a href="contactpage.html">Contact</a></li>
-    </ul>
-    
-  </nav>
+  <header>
+    <nav class="navbar">
+
+      <!-- Avatar + Name -->
+      <div class="profile-box">
+        <img src="avatar.png" alt="Avatar" class="avatar-img">
+        <h2 class="profile-name">Archana</h2>
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="avatarpage.html" class="active">Home</a></li>
+        <li><a href="skillspage1.html">Skills</a></li>
+        <li><a href="contactpage.html">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
 
   <section id="home" class="hero">
-    <div class="grid"></div>
     <h1 class="glow-title">Hi, I'm <br><span>Archana</span></h1>
-
- 
-
     <p class="desc">
       Passionate about building creative web solutions and learning cloud technologies.
     </p>
@@ -34,14 +36,14 @@
     <div class="hero-buttons">
       <a href="archana_bio.pdf" class="btn-primary">⬇ Download Resume</a>
       <!-- Get In Touch Button -->
-<button id="chatToggleBtn" class="chat-btn">Get In Touch</button>
+      <button id="chatToggleBtn" class="chat-btn">Chat with me</button>
 
-<!-- Chatbot Panel -->
-<div id="chatBox" class="chat-box">
-    <div class="chat-header">
-        <span>Chat with Me</span>
-        <button id="closeChat" class="close-btn">✖</button>
-    </div>
+      <!-- Chatbot Panel -->
+      <div id="chatBox" class="chat-box">
+        <div class="chat-header">
+          <span>Chat with Me</span>
+          <button id="closeChat" class="close-btn">✖</button>
+      </div>
 
     <div class="chat-messages" id="chatMessages">
         <div class="bot-msg">Hi! How can I help you today?</div>
@@ -107,4 +109,5 @@ function appendMessage(text, sender){
 </script>
 
 </body>
+
 </html>

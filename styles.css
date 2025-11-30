@@ -1,0 +1,47 @@
+
+    /* Reset & base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.04);
+      --maxw:1100px;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{background:linear-gradient(180deg,var(--bg),#071022);color:#e6eef6;min-height:100vh;line-height:1.5}
+    .wrap{max-width:var(--maxw);margin:40px auto;padding:28px}
+    header{display:flex;gap:24px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,#0ea5a4 0%,#06b6d4 100%);display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 30px rgba(6,182,212,0.12)}
+    h1{font-size:28px;margin-bottom:4px}
+    p.lead{color:var(--muted);margin-bottom:6px}
+
+    /* top actions */
+    .top-actions{margin-left:auto;display:flex;gap:10px}
+    .btn{border:1px solid rgba(255,255,255,0.06);background:transparent;padding:10px 14px;border-radius:12px;color:inherit;text-decoration:none;font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#0ea5a4);color:#022;border:none}
+
+    /* layout */
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    @media (max-width:980px){main{grid-template-columns:1fr} .top-actions{display:none}}
+
+    /* content cards */
+    .card{background:linear-gradient(180deg,var(--card),rgba(11,18,28,0.6));padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    h2{font-size:18px;margin-bottom:12px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* projects */
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{display:flex;gap:14px;align-items:center;padding:12px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.025)}
+    .project .meta{flex:1}
+    .tag{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-size:12px;color:var(--muted)}
+
+    /* sidebar */
+    .sidebar h3{margin-bottom:8px}
+    .skill-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px;border-radius:10px;font-size:13px;text-align:center}
+
+    /* contact */
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small helpers */
+    .small{font-size:13px;color:var(--muted)}
+    .links a{color:inherit;text-decoration:none}
+ 

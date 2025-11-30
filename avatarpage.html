@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Protfolio</title>
+<link rel="stylesheet" href="avatarStyles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="avatar">
+        <img src="avatar.png" alt="My Avatar">
+    </div>
+    <ul class="nav-links">
+      <li><a href="mainpage.html" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="projectspage.html">Projects</a></li>
+      <li><a href="contactpage.html">Contact</a></li>
+    </ul>
+    
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="grid"></div>
+    <h1 class="glow-title">Hi, I'm <br><span>Archana</span></h1>
+
+ 
+
+    <p class="desc">
+      Passionate about building creative web solutions and learning cloud technologies.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="archana_bio.pdf" class="btn-primary">⬇ Download Resume</a>
+      <!-- Get In Touch Button -->
+<button id="chatToggleBtn" class="chat-btn">Get In Touch</button>
+
+<!-- Chatbot Panel -->
+<div id="chatBox" class="chat-box">
+    <div class="chat-header">
+        <span>Chat with Me</span>
+        <button id="closeChat" class="close-btn">✖</button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+        <div class="bot-msg">Hi! How can I help you today?</div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="chatInputField" placeholder="Type a message..." />
+        <button id="sendMsgBtn">➤</button>
+    </div>
+</div>
+    </div>
+  </section>
+  <script>
+// toggle chatbox open/close
+document.getElementById("chatToggleBtn").onclick = function () {
+  const box = document.getElementById("chatBox");
+
+  // toggle visibility
+  if (box.style.display === "flex") {
+    box.style.display = "none";   // close if already open
+  } else {
+    box.style.display = "flex";   // open if closed
+  }
+};
+
+// close via ✖ button
+document.getElementById("closeChat").onclick = function () {
+  document.getElementById("chatBox").style.display = "none";
+};
+
+// send message
+document.getElementById("sendMsgBtn").onclick = sendMessage;
+document.getElementById("chatInputField").addEventListener("keypress", function(e){
+  if(e.key === "Enter") sendMessage();
+});
+
+function sendMessage(){
+  const inputField = document.getElementById("chatInputField");
+  const msg = inputField.value.trim();
+  if(msg === "") return;
+
+  // show user's message
+  appendMessage(msg, "user");
+
+  // bot auto-response
+  setTimeout(() => {
+    appendMessage("Thanks for your message! I will get back to you soon.", "bot");
+  }, 600);
+
+  inputField.value = "";
+}
+
+function appendMessage(text, sender){
+  const messageArea = document.getElementById("chatMessages");
+
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add(sender === "bot" ? "bot-msg" : "user-msg");
+  msgDiv.textContent = text;
+
+  messageArea.appendChild(msgDiv);
+  messageArea.scrollTop = messageArea.scrollHeight;
+}
+</script>
+
+</body>
+</html>

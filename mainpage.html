@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Achu Anumodh — Portfolio</title>
+  <meta name="description" content="Portfolio of Achu Anumodh — PHP Developer, AWS learner, IT Support" />
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">
+        <a class="btn" href="mainpage.html">AA</a>
+      </div>
+      <div>
+        <h1>Achu Anumodh</h1>
+        <p class="lead"> AWS learner • IT Support & Admin | Kerala, India</p>
+        <p class="small muted">IAspiring AWS Cloud Engineer transitioning into full-stack development with a focus on cloud-native PHP applications.</p>
+      </div>
+
+      <div class="top-actions">
+        <a class="btn" href="projectspage.html">Projects</a>
+        <a class="btn" href="contactpage.html">Contact</a>
+        <a class="btn primary" href="archana_bio.pdf" onclick="downloadPDF()">Download CV</a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card">
+          <h2>Featured Projects</h2>
+          <div class="projects">
+            <article class="project">
+              <div style="width:68px;height:54px;border-radius:8px;background:linear-gradient(135deg,#083344,#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700">PHP</div>
+              <div class="meta">
+                <strong>PHP Login & User Management</strong>
+                <div class="small muted">Login, registration, role-based access, and CRUD using PHP (PDO) and MySQL. Includes input validation and sessions.</div>
+                <div class="small" style="margin-top:6px"><span class="tag">PHP</span> <span class="tag">MySQL</span> <span class="tag">Authentication</span></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:68px;height:54px;border-radius:8px;background:linear-gradient(135deg,#2a2f4a,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700">AWS</div>
+              <div class="meta">
+                <strong>AWS EC2 + S3 Deployment</strong>
+                <div class="small muted">Deployed a sample web app to EC2, configured an S3 static site, and set up IAM roles and basic backup to S3.</div>
+                <div class="small" style="margin-top:6px"><span class="tag">EC2</span> <span class="tag">S3</span> <span class="tag">IAM</span></div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div style="width:68px;height:54px;border-radius:8px;background:linear-gradient(135deg,#065f46,#34d399);display:flex;align-items:center;justify-content:center;font-weight:700">SQL</div>
+              <div class="meta">
+                <strong>SQL Optimization & Query Library</strong>
+                <div class="small muted">Set of optimized queries showing joins, indexing examples, GROUP BY reports and small stored procedures for reporting.</div>
+                <div class="small" style="margin-top:6px"><span class="tag">MySQL</span> <span class="tag">Indexing</span> <span class="tag">Reporting</span></div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Experience & Work</h2>
+          <p class="muted">Teaching Assistant, Admin Executive, and IT Support — responsible for user onboarding, ticket resolution, system troubleshooting, and small automation tasks.</p>
+          <ul class="small muted" style="margin-top:8px;line-height:1.8">
+            <li>Handled ticket-based client issues within SLA for Windows, Linux, and macOS</li>
+            <li>Office 365 administration, mailbox migration, SharePoint basics</li>
+            <li>VPN (SSL & site-to-site) configuration and basic network troubleshooting</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h2>Writing & Documentation</h2>
+          <p class="small muted">Prepared step-by-step runbooks for common issues (mailbox migration, O365 user setup, backup procedures). Good at turning technical steps into simple guides for users.</p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Skills</h3>
+          <div class="skill-list" style="margin-top:8px">
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">AWS (EC2, S3)</div>
+            <div class="skill">Office 365</div>
+            <div class="skill">Windows / Linux</div>
+            <div class="skill">VPNs</div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Contact</h3>
+          <div class="contact-list" style="margin-top:8px">
+            <div class="small">Email: <a class="links" href="mailto:your.email@example.com">your.email@example.com</a></div>
+            <div class="small">Phone: +91 98765 43210</div>
+            <div class="small">Location: Kerala, India</div>
+            <div class="small">GitHub: <a href="#" class="links">github.com/yourusername</a></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Quick Links</h3>
+          <p class="small muted">Add links to live demos, GitHub repos, or a public CV here.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>© 2025 Achuanumodh.</small>
+    </footer>
+  </div>
+
+  <script>
+    function downloadPDF(){
+      alert('Click OK to download the Resume');
+    }
+  </script>
+</body>
+</html>

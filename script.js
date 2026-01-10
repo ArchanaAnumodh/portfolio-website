@@ -121,58 +121,6 @@ const observer = new IntersectionObserver((entries) => {
 
 skillCards.forEach(card => observer.observe(card));
 
-// CHAT FUNCTIONALITY
-const chatToggle = document.getElementById('chatToggle');
-const chatBox = document.getElementById('chatBox');
-const chatClose = document.getElementById('chatClose');
-const chatInput = document.getElementById('chatInput');
-const sendBtn = document.getElementById('sendBtn');
-const chatMessages = document.getElementById('chatMessages');
-
-// Toggle chat box
-chatToggle.addEventListener('click', () => {
-  chatBox.classList.toggle('active');
-});
-
-// Close chat box
-chatClose.addEventListener('click', () => {
-  chatBox.classList.remove('active');
-});
-
-// Send message function
-function sendMessage() {
-  const message = chatInput.value.trim();
-  if (message === '') return;
-
-  // Add user message
-  const userMsg = document.createElement('div');
-  userMsg.className = 'message user-message';
-  userMsg.textContent = message;
-  chatMessages.appendChild(userMsg);
-
-  chatInput.value = '';
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-
-  // Bot response after delay
-  setTimeout(() => {
-    const botMsg = document.createElement('div');
-    botMsg.className = 'message bot-message';
-    botMsg.textContent = 'Thanks for your message! I will get back to you soon. 😊';
-    chatMessages.appendChild(botMsg);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-  }, 600);
-}
-
-// Send message on button click
-sendBtn.addEventListener('click', sendMessage);
-
-// Send message on Enter key
-chatInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    sendMessage();
-  }
-});
-
 // PARALLAX EFFECT ON MOUSE MOVE
 document.addEventListener('mousemove', (e) => {
   const moveX = (e.clientX - window.innerWidth / 2) * 0.01;

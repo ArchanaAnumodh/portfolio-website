@@ -1815,3 +1815,254 @@ nav {
   color: #e0e0e0;
   font-style: italic;
 }
+
+/* Add these responsive fixes to your styles.css */
+
+/* MOBILE FIXES FOR EXPERIENCE SECTION */
+@media (max-width: 968px) {
+  .experience-card {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .exp-main-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .exp-logo {
+    align-self: center;
+  }
+
+  .exp-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .exp-details h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .exp-institution {
+    text-align: center;
+  }
+
+  .exp-responsibilities {
+    padding: 10px 20px;
+    padding-right: 20px;
+  }
+
+  .quote-open,
+  .quote-close {
+    font-size: 30px;
+  }
+
+  /* Hide floating photos on mobile, show them below */
+  .exp-gallery {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    pointer-events: all;
+  }
+
+  .exp-photo {
+    position: relative !important;
+    width: 100% !important;
+    height: 120px !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: rotate(0deg) !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .exp-photo:hover {
+    transform: scale(1.05) !important;
+    z-index: 10;
+  }
+
+  /* Make last photo span full width if odd number */
+  .experience-card:nth-child(1) .exp-photo:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HOBBIES SECTION FIX */
+  #hobbies {
+    min-height: auto;
+    padding: 80px 20px 60px;
+  }
+
+  .hobbies-subtitle {
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .gallery {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .photo-card {
+    position: relative !important;
+    width: 90% !important;
+    max-width: 300px !important;
+    margin: 0 !important;
+    left: auto !important;
+    top: auto !important;
+    transform: rotate(0deg) !important;
+    opacity: 1 !important;
+  }
+
+  .photo-card:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+  }
+
+  .photo-card img {
+    height: 220px;
+  }
+
+  /* ABOUT SECTION FIX */
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-photo {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .about-photo img {
+    height: 400px;
+  }
+
+  .about-photo::before,
+  .about-photo::after {
+    display: none;
+  }
+
+  /* STATS GRID FIX */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  /* VALUES GRID FIX */
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* EXPERIENCE GALLERY MOBILE */
+  .exp-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-photo {
+    height: 180px !important;
+  }
+
+  .experience-card:nth-child(1) .exp-photo:nth-child(4) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content .tagline {
+    font-size: 18px;
+  }
+
+  .hero-content .tagline-artist {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-photo img {
+    height: 350px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .photo-card {
+    width: 95% !important;
+  }
+
+  .photo-card img {
+    height: 200px;
+  }
+
+  .exp-responsibilities {
+    padding: 10px 15px;
+  }
+
+  .exp-responsibilities p {
+    font-size: 13px;
+  }
+
+  .quote-open,
+  .quote-close {
+    font-size: 25px;
+  }
+}
+
+/* LANDSCAPE MOBILE FIX */
+@media (max-width: 968px) and (orientation: landscape) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .photo-card {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .exp-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

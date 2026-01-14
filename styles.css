@@ -2344,3 +2344,12 @@ nav {
     text-align: center;
   }
 }
+.paper-link {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
+}
